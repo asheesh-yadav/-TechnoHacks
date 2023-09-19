@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Registration Form</title>
+</head>
+<body>
+    <div class="logo">
+    <img src="https://siponline.in/assets/public/img/logo-wide_sip.png" height="100px"  alt="pic">
+    </div>
+    <div class="wrapper">
+    <div class="reg"><h1>Registration Form
+    <img src="https://img.icons8.com/?size=2x&id=t5GRNS5yIsHP&format=png" height="50px" alt=""></h1>
+    </div>
+    <form id="registrationForm" action="#" method="post">
+        <div class="input user">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="username">
+        <span class="error" id="usernameError"></span>
+        <br><br>
+        </div>
+
+         <div class="input email">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <span class="error" id="emailError"></span>
+        <br><br>
+        </div>
+
+        <div class="input pas">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="password" required>
+        <span class="error" id="passwordError"></span>
+        <br><br>
+        </div>
+         
+        <div class="input cpas">
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+        <span class="error" id="confirmPasswordError"></span>
+        <br><br>
+        </div>
+
+        <div class="btn"><input type="submit" value="Register"></div>
+    </form>
+    </div>
+    <script>
+        const registrationForm = document.getElementById('registrationForm');
+        const username = document.getElementById('username');
+        const email = document.getElementById('email');
+        const password = document.getElementById('password');
+        const confirmPassword = document.getElementById('confirmPassword');
+        const usernameError = document.getElementById('usernameError');
+        const emailError = document.getElementById('emailError');
+        const passwordError = document.getElementById('passwordError');
+        const confirmPasswordError = document.getElementById('confirmPasswordError');
+
+        registrationForm.addEventListener('submit', function (event) {
+            let isValid = true;
+
+            // Username validation
+            if (username.value.length < 5) {
+                usernameError.textContent = 'Username must be at least 5 characters';
+                isValid = false;
+            } else {
+                usernameError.textContent = '';
+            }
+
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value)) {
+                emailError.textContent = 'Invalid email address';
+                isValid = false;
+            } else {
+                emailError.textContent = '';
+            }
+
+            // Password validation
+            if (password.value.length < 8) {
+                passwordError.textContent = 'Password must be at least 8 characters';
+                isValid = false;
+            } else {
+                passwordError.textContent = '';
+            }
+
+            // Confirm password validation
+            if (password.value !== confirmPassword.value) {
+                confirmPasswordError.textContent = 'Passwords do not match';
+                isValid = false;
+            } else {
+                confirmPasswordError.textContent = '';
+            }
+
+            if (!isValid) {
+                event.preventDefault(); // Prevent form submission if there are validation errors
+            }
+        });
+    </script>
+</body>
+</html>

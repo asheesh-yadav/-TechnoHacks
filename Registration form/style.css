@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Jost:wght@400;500;600;700&family=Pacifico&family=Poppins:wght@300&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+}
+form{
+    margin-top: 30px;
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+    background: url('https://images.pexels.com/photos/1762851/pexels-photo-1762851.jpeg?cs=srgb&dl=pexels-ann-h-1762851.jpg&fm=jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.logo{
+    position:absolute;
+    left:945px;
+    top:100px;
+}
+.wrapper{
+    margin-top: 190px;
+    height: 510px;
+    width: 30%;
+    background:transparent;
+    border:2px solid rgba(255,255,255,.2);
+    box-shadow:0 0 20px rgba(0,0,0,.2);
+    backdrop-filter: blur(10px);
+    border-radius: 50px 5px;
+    background-image: linear-gradient(to right, rgba(18, 93, 214, 0.265), rgba(230, 208, 14, 0.295));
+}
+.reg{
+    display: flex;
+    justify-content: space-between; 
+    position: relative;
+}
+img{
+    position: absolute;
+    top:20px;
+    right:15px;
+}
+.wrapper h1{
+    font-size: 36px;
+    margin-left: 5px;
+    color:#fff;
+    padding:8px;
+    margin-top:10px;
+    border-bottom: 2px solid silver;
+    width: 100%;
+}
+.wrapper .input{
+    font-size:17px;
+    font-weight: 600px;
+    padding: 8px;
+    margin-left: 20px;
+}
+.wrapper .input input::placeholder{
+      padding-left: 60px;
+}
+.wrapper .input input{
+    margin-left: 30px;
+    width: 50%;
+    height: 30px;
+    border-radius: 8px;
+    border:2px solid rgba(255, 255, 255, 0.2);
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+}
+.wrapper .user input{
+   margin-left: 70px;
+}
+.wrapper .email input{
+    margin-left: 114px;
+}
+.wrapper .pas input{
+    margin-left: 80px;
+}
+.wrapper .cpas input{
+    margin-left: 10px;
+}
+.btn input{
+    width: 70%;
+    margin-left: 70px;
+    height: 40px;
+    font-size: 16px;
+    color:black;
+    border-radius: 40px;
+    border:2px solid rgba(255, 255, 255, 0.2);
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+}
+.btn input:hover{
+    transition: 0.2s ease-in;
+    background:linear-gradient(to right, rgba(18, 93, 214, 0.233), rgba(230, 208, 14, 0.235));
+    cursor: pointer;
+}
